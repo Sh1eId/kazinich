@@ -1,8 +1,8 @@
 html {
-    height: 100%; /* Высота веб-страницы /
-    background: #000 url(images/light.gif) 
-          no-repeat right bottom; / Путь к графическому файлу с фоном /
-    color: #fff; / Белый цвет текста */
+    height: 100%;
+    background: #000 url(china-flag-chinese.gif) 
+          no-repeat right bottom;
+    color: #fff;
    }
 body {
     display: flex;
