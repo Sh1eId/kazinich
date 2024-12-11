@@ -1,3 +1,9 @@
+html {
+    height: 100%; /* Высота веб-страницы /
+    background: #000 url(images/light.gif) 
+          no-repeat right bottom; / Путь к графическому файлу с фоном /
+    color: #fff; / Белый цвет текста */
+   }
 body {
     display: flex;
     justify-content: center;
