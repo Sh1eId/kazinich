@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровой Автомат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .reels {
+            display: flex;
+        }
+
+        .reel {
+            width: 100px;
+            height: 300px;
+            overflow: hidden;
+            border: 2px solid #333;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .symbol {
+            width: 100%;
+            height: 100px; /* Высота символа */
+            background-size: cover; /* Чтобы изображение заполняло элемент */
+            background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+            background-position: center; /* Центрируем изображение */
+        }
+
+        .spin-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Игровой Автомат</h1>
+    <div class="reels">
+        <div class="reel">
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+        </div>
+        <div class="reel">
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+        </div>
+        <div class="reel">
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+        </div>
+    </div>
+    <button class="spin-button">Крутить</button>
+
+    <script>
+        document.querySelector('.spin-button').addEventListener('click', function() {
+            const reels = document.querySelectorAll('.reel');
+
+            reels.forEach(reel => {
+                // Генерация уникального числа от 1 до 5 для каждой символа в катушке
+                const uniqueSymbols = getRandomNumbers(1, 5, 3); // Генерируем 3 случайных числа от 1 до 5
+                
+                reel.querySelectorAll('.symbol').forEach((symbol, index) => {
+                    const symbolNumber = uniqueSymbols[index];
+                    symbol.style.backgroundImage = url('images/symbol${symbolNumber}.png'); // Установка фона в зависимости от числа
+                    symbol.innerText = ''; // Очищаем текст, чтобы не отображалось число
+                });
+            });
+        });
+
+        // Функция для получения случайных чисел в заданном диапазоне
+        function getRandomNumbers(min, max, count) {
+            const numbers = [];
+            
+            while (numbers.length < count) {
+                const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+
+                // Убедимся, что число еще не добавлено в массив
+                if (!numbers.includes(randomNum)) {
+                    numbers.push(randomNum);
+                }
+            }
+
+            return numbers;
+        }
+    </script>
+
+</body>
+</html>
