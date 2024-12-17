@@ -82,7 +82,7 @@ deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta)%num_icons);
 debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
 
 // Условия выигрыша
-if (indexes[0] == indexes[1] || indexes[1] == indexes[2] || indexes[2] == indexes[3]){
+if (indexes[0] === indexes[1] && indexes[1] === indexes[2] && indexes[2] === indexes[3] && indexes[3] === indexes[4]){
 const winCls = indexes[0] == indexes[2]== indexes[3] ? "win2" : "win1";
 document.querySelector(".slots").classList.add(winCls);
 setTimeout(() => document.querySelector(".slots").classList.remove(winCls), 2000)
