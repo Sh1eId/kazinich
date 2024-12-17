@@ -88,10 +88,5 @@ document.querySelector(".slots").classList.add(winCls);
 setTimeout(() => document.querySelector(".slots").classList.remove(winCls), 2000)
 }
      button.disabled = false;
-// Можно добавить возможность запустить ещё раз
-//setTimeout(rollAll, 3000);
 });
 };
-
-// Kickoff
-//setTimeout(rollAll, 1000);
