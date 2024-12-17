@@ -10,7 +10,7 @@ button.addEventListener('click', function() {
 // Инициализация переменных
 const debugEl = document.getElementById('debug'),
 			// Сопоставление индексов с иконками
-			iconMap = ["banana", "seven", "cherry", "plum", "orange", "bell", "bar", "lemon", "melon"],
+			iconMap = ["podval", "roflan", "jaba", "barny", "1win", "adun", "FBI_roflan", "rice"],
 			// Width of the icons
 			icon_width = 79,	
 			// Высота одной иконки
