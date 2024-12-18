@@ -5,6 +5,9 @@ button.addEventListener('click', function() {
 	setTimeout(rollAll, 100);
 	// Блокирует кнопку
 	button.disabled = true;
+                  var audio = new Audio('spin.mp3');
+                  
+audio.play();
 });
 
 // Инициализация переменных
@@ -31,11 +34,12 @@ const norand = {
     command() {
 		if(random){
 			random = false;
+                console.log("random off");
 		}else{
 			random = true;
+                console.log("random on");
 		}
-         
-		console.log("random off");
+    
     },
 };
 const roll = (reel, offset = 0) => {
@@ -110,6 +114,3 @@ function rollAll() {
 			//setTimeout(rollAll, 3000);
 		});
 };
-
-// Kickoff
-//setTimeout(rollAll, 1000);
