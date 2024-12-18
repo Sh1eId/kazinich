@@ -141,6 +141,11 @@ body {
       width: 90%; /* Увеличиваем ширину слотов для мобильных устройств */
   }
 
+  .slots .reel {
+    width:90%;
+    height: 90%;
+  }
+
   .spin-button {
       width: 90%; /* Увеличиваем ширину кнопки для мобильных устройств */
   }
@@ -150,19 +155,14 @@ body {
   }
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
-  .slots {
-      width: 80%; /* Ширина слотов для планшетов */
-  }
-
-  .spin-button {
-      width: 80%; /* Ширина кнопки для планшетов */
-  }
-}
-
 @media (min-width: 1201px) {
   .slots {
       width: 400px; /* Фиксированная ширина слотов для десктопов */
+  }
+
+  .slots .reel {
+    width:79px;
+    height: 237px;
   }
 
   .spin-button {
