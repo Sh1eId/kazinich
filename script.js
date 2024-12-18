@@ -106,7 +106,7 @@ function rollAll() {
 				const winCls = indexes[0] == indexes[1] == indexes[2] == indexes[3] == indexes[4]? "win2" : "win1";
 				document.querySelector(".slots").classList.add(winCls);
 				setTimeout(() => document.querySelector(".slots").classList.remove(winCls), 2000)
-				var audio = new Audio('spin.mp3');
+				var audio = new Audio('jackpot.mp3');
                                 audio.play();
 			}
 		     button.disabled = false;
