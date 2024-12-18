@@ -1,10 +1,13 @@
-const button = document.querySelector('.spin-button');
+﻿const button = document.querySelector('.spin-button');
 var random = true;
  
 button.addEventListener('click', function() {
 	setTimeout(rollAll, 100);
 	// Блокирует кнопку
 	button.disabled = true;
+                  var audio = new Audio('spin.mp3');
+                  
+audio.play();
 });
 
 // Инициализация переменных
