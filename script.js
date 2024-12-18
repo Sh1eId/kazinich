@@ -79,7 +79,7 @@ const roll = (reel, offset = 0) => {
 		
 	});
 };
-
+audio.stop();
 
 /**
  *  Функция для вращения всех рулетов
@@ -106,7 +106,6 @@ function rollAll() {
 				const winCls = indexes[0] == indexes[1] == indexes[2] == indexes[3] == indexes[4]? "win2" : "win1";
 				document.querySelector(".slots").classList.add(winCls);
 				setTimeout(() => document.querySelector(".slots").classList.remove(winCls), 3000)
-				audio.stop();
 				var audio = new Audio('jackpot.mp3');
                                 audio.play();
 			}
